@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>COVID 19 - Real Time Tracker</title>
+</head>
+
+<body>
+
+    <main class="content-area container">
+
+        <header>
+            <h1>COVID-19 Case In <span id="country-flag"></span></h1>
+            <h4 id="date-today"></h4>
+        </header>
+
+        <section class="row d-flex justify-content-center">
+            <div class="input-group mb-3 col-md-5 col-md-offset-5">
+                <input id="country-name" type="text" class="form-control"
+                    placeholder="Enter Country Name ">
+
+                <div class="input-group-append">
+                    <button class="btn " type="button" id="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-tachometer fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Active Case</h5>
+                        <h3 id="active-case" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-th-list fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Today New Case</h5>
+                        <h3 id="today-case" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-times fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Today New Death</h5>
+                        <h3 id="today-death" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-check-square fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Today Recovered</h5>
+                        <h3 id="today-recovered" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-times-circle fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Total Death</h5>
+                        <h3 id="total-death" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-bar-chart fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">One Death Per People</h5>
+                        <h3 id="one-death-per-people" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-bar-chart fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">One Case Per People</h5>
+                        <h3 id="one-case-per-people" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-user-md fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">One Test Per People</h5>
+                        <h3 id="one-test-per-people" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <i class="fa fa-check-circle-o fa-3x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Total Recovered</h5>
+                        <h3 id="total-recovered" class="card-text"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- custom script -->
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- external css -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
