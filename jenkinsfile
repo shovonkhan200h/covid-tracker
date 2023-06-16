@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/shovonkhan200h/covid-tracker.git'
+            }
+        }
+    }
+}
