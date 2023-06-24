@@ -16,7 +16,7 @@ pipeline {
         
         stage('Push') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'bayan-docker-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'ang-docker-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
                     sh 'docker push bayanaltaleb/group-project:1.0' 
                 }
