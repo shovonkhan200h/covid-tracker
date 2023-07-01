@@ -10,7 +10,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'docker build -t bayanaltaleb/group-project:2.0 .' 
+                sh 'docker build -t bayanaltaleb/group-project:3.0 .' 
             }
         }
         
@@ -18,14 +18,14 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
-                    sh 'docker push bayanaltaleb/group-project:2.0' 
+                    sh 'docker push bayanaltaleb/group-project:3.0' 
                 }
             }
         }
         
         stage('Deploy - port 3000') {
             steps {
-                sh 'docker run -d -p 3000:80 bayanaltaleb/group-project:2.0'
+                sh 'docker run -d -p 3000:80 bayanaltaleb/group-project:3.0'
             }
         }
     }
