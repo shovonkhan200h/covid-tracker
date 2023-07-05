@@ -1,4 +1,4 @@
-
+//js
 function dateToday() {
     let today = new Date()
     console.log(today);
